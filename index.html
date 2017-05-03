@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>css tricks</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		@keyframes anim{
+	0%{
+		border-top:230px inset black;
+	}
+	50%{
+		border-top:220px inset black;
+	}
+	100%{
+		border-top:230px inset black;
+	}
+	}
+
+@keyframes anim2{
+	0%{
+		border-top:24px inset black;
+	}
+	50%{
+		border-top:20px inset black;
+		background-color:red;
+	}
+	100%{
+		border-top:24px inset black;
+	}
+	}
+
+@keyframes anim3{
+	0%{
+		border-top:18px inset red;
+	}
+	50%{
+		border-top:20px inset red;
+	}
+	100%{
+		border-top:18px inset red;
+	}
+	}
+
+body{
+	background-image:url("AKatb1AVetIoE.gif");
+	background-size: cover;
+	background-color:rgba(0,0,0,.85);
+	opacity: .95;
+	}
+
+.sect{	
+	height:500px;
+	width:500px;
+	margin: 0 auto;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+	overflow: hidden;
+	border-radius:50%;
+	background-color:yellow;
+	transition:2s;
+	border-top:200px solid black;
+	animation-name: anim;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+	box-shadow:20px 0px 80px black;
+	cursor:crosshair;
+	}
+
+
+
+.left{
+	background-image:url("eye.png");
+	background-size: cover;
+	background-position:bottom;
+	float: left;
+	height:200px;
+	width:200px;
+	margin:10px;
+	border-radius:50%;
+	background-color: coral;
+	border-top:20px solid black;
+	border-left:5px solid black;
+	animation-name: anim2;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+	box-shadow:20px 0px 80px black;
+	overflow: hidden;
+	}
+
+.right{
+	height:200px;
+	width:200px;
+	float: right;
+	margin:10px;
+	border-radius:50%;
+	background-color: coral;
+	border-top:20px solid black;
+	border-right:5px solid black;
+	animation-name: anim2;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+	box-shadow:-20px 0px 80px black;
+	overflow: hidden;
+	background-image:url("eye.png");
+	background-position:bottom;
+	background-size: cover;
+	}
+
+.bottom{
+	height:50px;
+	width:300px;
+	border-radius:50%;
+	position: absolute;
+	bottom:0;
+	left:22%;
+	background-color:black;
+	border-top:20px solid red;
+	border-bottom:20px solid red;
+	animation-name: anim3;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+	}
+
+span{
+	height:32px;
+	width:40px;
+	float:left;
+	margin-top:10px;
+	margin-left:30px;
+	background-color: grey;
+	border-radius:20%;
+	}
+
+.sect:hover{
+	opacity:0;
+	transition:2s;
+	background-color:black;
+	filter: blur(200px);
+	transform: scale(.2);
+	}
+	</style>
+</head>
+<body>
+
+<div class="sect">
+		<div class="left">----------------------------</div>
+		<div class="right">---------------------------</div>
+		<div class="bottom">
+			<span></span>
+			<span></span>
+			<span style="box-shadow:2px 0px 60px white;"></span>
+			<span></span>
+		</div>
+		<h1 style="opacity: .7;"></h1>
+
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>
